@@ -44,6 +44,7 @@ export const firestore = getFirestore();
 
 const provider = new GoogleAuthProvider();
 provider.setCustomParameters({ params: "select_account" });
+
 export const signInWithGoogle = () =>
   signInWithPopup(auth, provider).catch((error) =>
     console.log("Sign in with Google failed", error)
